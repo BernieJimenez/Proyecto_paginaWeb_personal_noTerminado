@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<div class="container">
+    <center>No funciona</center>
+</div>
+
+<style>
+    .container {
+        background: red;
+        width: 45vw;
+        height: 45vh;
+        border-radius: 25px;
+        color: aliceblue;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: xx-large;
+        padding: 3rem;
+        border: 50px blue;
+    }
+
+
+    body {
+        background-color: aqua;
+    }
+
+</style>
+

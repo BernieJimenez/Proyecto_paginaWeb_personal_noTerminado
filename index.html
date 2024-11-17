@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"> <!--codificacion-->
+    <meta name="viewport" content="width=davice-width">
+    <title>Portafolio Bernie</title>
+    <meta name="description" content="Portafolio de Bernie, Experiencia en sotfware">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4032a8">
+    <link rel="icon" type="imagen/jpg" href="/Images/YO.png">
+    <style>
+        h1 {
+            color: rgb(0 0 0 ) ;
+            border-width: 3px;
+            border-style: solid;
+            border-color: rgb(140, 143, 0);
+            }
+
+        body {
+            background: lightblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #show {
+            color: aquamarine;
+            background-color: black;
+            border-radius: 5px;
+        } 
+
+        #show:hover {
+            outline: 2px solid red;
+        }
+        #show:active {
+            outline: 2px solid blue;
+
+        }
+        li:first-child {
+            color: aquamarine;
+        }
+        li:last-child {
+            color: blue;
+        }
+        dialog {
+            color: rgb(16, 238, 238);
+            border-radius: 5px;
+            background-color: bisque;
+        }
+  
+    </style>
+    
+    
+    
+       
+
+
+</head>
+
+<body>
+    <header>
+        <!-- h1, h2 entre otros es para el tamaño del texto-->
+        <h1>Portafolio de Bernie</h1>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#Proyectos">Proyectos</a>
+        <a href="https://github.com/BernieJimenez" target="_blank" rel="noreferrer"> github</a>
+        <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/q1ULJ92aldE?si=TyeuwdIwiVvNi7pe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+        <dialog id="dialog">
+            <h1>¿Sabias que puedes abrir un modal asi?</h1>
+            <p>Y es totalmente nativo</p>
+            <button id="hide">Cerrar modal</button>
+            
+        </dialog>
+
+        <div><button id="show">Ver mas Informacion</button></div>
+
+        <script>
+            window.show.addEventListener('click', () => {
+                window.dialog.showModal()
+            })
+
+            window.hide.addEventListener('click', () => {
+                window.dialog.close()
+            })
+        </script>
+    </header>
+    <main>
+        <!-- P es para poner texto y strong es para ponerlo en negrito lo que quieras-->
+        <p>Conocimiento en <strong>HTML, CSS Y JAVASCRIPT</strong> aprendiendo</p>
+        <!-- la id es para referir al texto, enviar al texto-->
+        <h2 id="experiencia">Experiencia</h2>
+        <!-- ul es para ponerlo con puntitos y ol con numeros en orden-->
+        <ul>
+            <li>CSS - 2024 </li>
+            <li>HTML - 2020 </li>
+            <li>JAVASCRIPT - 2022 </li>
+        </ul>
+
+        <img style="width:100%; aspect-ratio:626/470;" title="Un Joven programador"
+            alt="Una imagen de un dibujo de un muchacho" src="/Images/YO.png">
+
+        <h2 id="Proyectos">Mis proyectos</h2>
+
+        <aside>
+            <header>
+                <h3> Mis tecnologias favoritas</h3>
+            </header>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </ol>
+        </aside>
+
+</body>
+<section>
+    <h2> Preguntas frecuentes</h2>
+    <details>
+        <summary>¿Que estudie?</summary>
+        <p>Estoy estudiando en la univesidad Dominicana OYM, Ingenieria en sistema</p>
+    </details>
+    <details>
+        <summary>¿Cuales son mis hobbies?</summary>
+        <p>Me gusta la programacion, jugar videos juegos.</p>
+    </details>
+    <details>
+        <summary>¿Cuales son mis lenguaje favorito?</summary>
+        <p>HTML, CSS Y JAVASCRIPT</p>
+    </details>
+</section>
+<section>
+    <h2>Formulario de contacto</h2>
+
+    <form method="post" action="/">
+        <fieldset>
+            <legend>Informacion personal</legend>
+            <div>
+                <label>Nombre:
+                    <input type="text" name="name" placeholder="Bernie Jimenez Bueno" required>
+                </label>
+            </div>
+            <div>
+                <label>Email:
+                    <input type="email" name="email" placeholder="Ejemplo@gmail.com" required>
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informacion adicional</legend>
+            <div>
+                <label>Telefono:
+                    <input type="tel" name="Telefono" placeholder="888-888-8888" required pattern="[0-9]{10}">
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Otros</legend>
+
+            <div>
+                <label for="why">Por que quieres contactar?</label>
+                <select name="why" id="why">
+                    <option value="1">Trabajo</option>
+                    <option value="2">Duda</option>
+                    <option value="3">Mas Informacion</option>
+                </select>
+            </div>
+            <div>
+                <label for="terms">Aceptas los terminos</label>
+                <input type="checkbox" id="terms" name="terms" required>
+            </div>
+            <div>
+                <datalist id="languages">
+
+                    <option value="JAVASCRIPT"></option>
+                    <option value="CSS"></option>
+                    <option value="HTML"></option>
+
+                </datalist>
+                <label>
+                    Con que lenguaje quieres que te ayude?
+                    <input list="languages" name="languages">
+                </label>
+
+            </div>
+        </fieldset>
+
+        <button>Enviar contacto</button>
+    </form>
+</section>
+</main>
+<!-- el footer siempre va afuera del main-->
+<footer>
+    <div>
+        Copyright 2024 - el Portafolio mas genial del mundo
+    </div>
+
+    <a href="mailto: berniejimenez493@gmail.com"> Enviame un correo</a>
+</footer>
+
+</html>
